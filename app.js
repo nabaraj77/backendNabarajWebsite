@@ -13,9 +13,9 @@ require("./initDB")();
 //CORS
 app.use(
   cors({
-    credentials: true,
+    allowedHeaders: "*",
+    allowMethods: "*",
     origin: "*",
-    optionSuccessStatus: 200,
   })
 );
 
@@ -32,7 +32,7 @@ const ProjectRoute = require("./Routes/Project.route");
 app.use("/api", ProjectRoute);
 
 //Server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server started at port${PORT}`);
 });

@@ -31,10 +31,6 @@ app.use("/api", MessageRoute);
 const ProjectRoute = require("./Routes/Project.route");
 app.use("/api", ProjectRoute);
 
-// //SENDING MESSAGE IN GMAIL
-// const MessageSendingRoute = require("./Routes/MessageSender.route");
-// app.use("/api", MessageSendingRoute);
-
 //Server
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
